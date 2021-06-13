@@ -4,8 +4,9 @@ import hashlib
 import time
 import os
 
-Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
-#Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
+#Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
+Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
+#Target_password = "d79096188b670c2f81b7001f73801117" # passw
 CHARACTERS  = range(97,122) #a-z
 MAX_LENGTH  = 7
 
@@ -41,8 +42,6 @@ def recurse(width, position, baseString):
 
 # Iterates over all char combos up to a given length
 def brute_force():
-    global begin
-    begin = time.clock()
     print("brute force attack starting")
     for baseWidth in range(1, MAX_LENGTH + 1):
         #print(f"width: {baseWidth} starting")
@@ -62,6 +61,8 @@ def menu():
     if (guess=='1'):
         start()
     else:
+        global begin
+        begin = time.clock()
         brute_force()
 
 #init

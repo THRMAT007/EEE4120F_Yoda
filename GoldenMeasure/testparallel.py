@@ -5,9 +5,9 @@ import time
 import os
 import threading
 
-#Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
-Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
-
+Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
+#Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
+#Target_password = "d79096188b670c2f81b7001f73801117" # passw
 CHARACTERS  = range(97,122) #a-z
 MAX_LENGTH  = 7
 Num_threads =2
@@ -34,7 +34,7 @@ def recurse(width, position, baseString,number):
         for char in CHARACTERS:
             recurse(width, position + 1, baseString + "%c" % char,number)
     else:
-        for char in CHARACTERS[::2]:
+        for char in CHARACTERS[::Num_threads]:
             hash(baseString + "%c" % (char+number),number)
 
     #for char in CHARACTERS:
@@ -45,9 +45,7 @@ def recurse(width, position, baseString,number):
 
 # Iterates over all char combos up to a given length
 def brute_force(number):
-    global begin
-    begin = time.clock()
-    print("brute force attack starting")
+    print(f"brute force attack starting on thread: {number}")
     for baseWidth in range(1, MAX_LENGTH + 1):
         #print(f"width: {baseWidth} starting")
         recurse(baseWidth, 0, "",number)
@@ -66,6 +64,8 @@ def menu():
     if (guess=='1'):
         start()
     else:
+        global begin
+        begin = time.clock()
         for i in range(0,Num_threads):
             x = threading.Thread(target=brute_force,args=(i,) )
             x.start()
