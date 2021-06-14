@@ -17,7 +17,7 @@ def hash(password):
     
     m = hashlib.md5(password.encode('utf-8'))
     
-    #print(m.hexdigest())
+    print(m.hexdigest())
     #print("Time taken to hash password: ")
     #print(end-start)
     if (m.hexdigest() == Target_password):

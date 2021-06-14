@@ -1,0 +1,205 @@
+Staring testing
+staring testing with password = p
+staring testing with threads = 1
+it took: 0.00035400000000000015 seconds
+it took: 0.0004320000000000018 seconds
+it took: 0.00024300000000000016 seconds
+it took: 0.0004149999999999987 seconds
+it took: 0.0005090000000000025 seconds
+it took: 0.0004170000000000007 seconds
+it took: 0.0006909999999999972 seconds
+it took: 0.0007810000000000039 seconds
+it took: 0.0007590000000000097 seconds
+it took: 0.0004949999999999954 seconds
+staring testing with threads = 2
+it took: 0.011698 seconds
+it took: 0.012105999999999992 seconds
+it took: 0.005919000000000001 seconds
+it took: 0.005757999999999999 seconds
+it took: 0.006553999999999997 seconds
+it took: 0.006226999999999996 seconds
+it took: 0.006293 seconds
+it took: 0.005781000000000001 seconds
+it took: 0.005735999999999998 seconds
+it took: 0.005866999999999997 seconds
+staring testing with threads = 13
+it took: 0.011860000000000002 seconds
+it took: 0.017407 seconds
+it took: 0.033281000000000005 seconds
+it took: 0.016651 seconds
+it took: 0.08180100000000001 seconds
+it took: 0.02326099999999999 seconds
+it took: 0.023039000000000004 seconds
+it took: 0.028185 seconds
+it took: 0.011806999999999998 seconds
+it took: 0.012121 seconds
+staring testing with password = pa
+staring testing with threads = 1
+it took: 0.0008580000000000011 seconds
+it took: 0.002694999999999996 seconds
+it took: 0.0008120000000000002 seconds
+it took: 0.0025330000000000005 seconds
+it took: 0.0008339999999999979 seconds
+it took: 0.0007170000000000024 seconds
+it took: 0.0007749999999999979 seconds
+it took: 0.002699 seconds
+it took: 0.001000999999999995 seconds
+it took: 0.0007390000000000001 seconds
+staring testing with threads = 2
+it took: 0.0015329999999999996 seconds
+it took: 0.0017669999999999977 seconds
+it took: 0.0006369999999999987 seconds
+it took: 0.0005150000000000016 seconds
+it took: 0.0004889999999999999 seconds
+it took: 0.001243000000000001 seconds
+it took: 0.001688000000000002 seconds
+it took: 0.0005469999999999989 seconds
+it took: 0.0006019999999999984 seconds
+it took: 0.00046599999999999767 seconds
+staring testing with threads = 13
+it took: 0.00033600000000000296 seconds
+it took: 0.0002720000000000014 seconds
+it took: 0.0006169999999999995 seconds
+it took: 0.0007530000000000037 seconds
+it took: 0.00031899999999999984 seconds
+it took: 0.0003359999999999995 seconds
+it took: 0.0005679999999999991 seconds
+it took: 0.0002909999999999996 seconds
+it took: 0.0005339999999999998 seconds
+it took: 0.00068 seconds
+staring testing with password = pas
+staring testing with threads = 1
+it took: 0.019844999999999995 seconds
+it took: 0.02796300000000001 seconds
+it took: 0.022046000000000003 seconds
+it took: 0.014929999999999999 seconds
+it took: 0.018763000000000002 seconds
+it took: 0.018963999999999995 seconds
+it took: 0.020747999999999996 seconds
+it took: 0.018098999999999997 seconds
+it took: 0.021030999999999998 seconds
+it took: 0.014138000000000001 seconds
+staring testing with threads = 2
+it took: 0.017377999999999998 seconds
+it took: 0.037803 seconds
+it took: 0.007303999999999998 seconds
+it took: 0.007360000000000002 seconds
+it took: 0.017936 seconds
+it took: 0.017831 seconds
+it took: 0.026262999999999995 seconds
+it took: 0.014388999999999999 seconds
+it took: 0.012341999999999999 seconds
+it took: 0.012462999999999998 seconds
+staring testing with threads = 13
+it took: 0.081231 seconds
+it took: 0.10438 seconds
+it took: 0.034346 seconds
+it took: 0.06470200000000001 seconds
+it took: 0.196421 seconds
+it took: 0.12204099999999998 seconds
+it took: 0.08036599999999999 seconds
+it took: 0.055584 seconds
+it took: 0.050913 seconds
+it took: 0.110257 seconds
+staring testing with password = pass
+staring testing with threads = 1
+it took: 0.46766499999999994 seconds
+it took: 0.422546 seconds
+it took: 0.429272 seconds
+it took: 0.427898 seconds
+it took: 0.64072 seconds
+it took: 0.48654500000000006 seconds
+it took: 0.457163 seconds
+it took: 0.415251 seconds
+it took: 0.508162 seconds
+it took: 0.462499 seconds
+staring testing with threads = 2
+it took: 0.5164890000000001 seconds
+it took: 0.52738 seconds
+it took: 0.507024 seconds
+it took: 0.45338500000000004 seconds
+it took: 0.45143099999999997 seconds
+it took: 0.561668 seconds
+it took: 0.51377 seconds
+it took: 0.47410899999999995 seconds
+it took: 0.531983 seconds
+it took: 0.593124 seconds
+staring testing with threads = 13
+it took: 0.9036919999999999 seconds
+it took: 0.53061 seconds
+it took: 0.646466 seconds
+it took: 0.8792249999999999 seconds
+it took: 0.356355 seconds
+it took: 0.8037259999999999 seconds
+it took: 0.867925 seconds
+it took: 0.148204 seconds
+it took: 0.7786609999999999 seconds
+it took: 0.6872020000000001 seconds
+staring testing with password = passw
+staring testing with threads = 1
+it took: 12.530704 seconds
+it took: 13.130998 seconds
+it took: 12.784301 seconds
+it took: 12.139550999999999 seconds
+it took: 11.726245 seconds
+it took: 12.335322 seconds
+it took: 12.222448 seconds
+it took: 12.362896999999998 seconds
+it took: 12.274381 seconds
+it took: 11.90445 seconds
+staring testing with threads = 2
+it took: 13.472431 seconds
+it took: 12.562168999999999 seconds
+it took: 12.545578 seconds
+it took: 13.094743000000001 seconds
+it took: 15.120715 seconds
+it took: 13.993751999999999 seconds
+it took: 13.818824000000001 seconds
+it took: 13.13213 seconds
+it took: 13.587852000000002 seconds
+it took: 15.93059 seconds
+staring testing with threads = 13
+it took: 20.256270999999998 seconds
+it took: 19.546294 seconds
+it took: 18.702976 seconds
+it took: 22.97492 seconds
+it took: 18.713753 seconds
+it took: 21.085948 seconds
+it took: 18.992522 seconds
+it took: 18.650132 seconds
+it took: 19.87542 seconds
+it took: 17.929781 seconds
+staring testing with password = passwd
+staring testing with threads = 1
+it took: 346.70874200000003 seconds
+it took: 329.818721 seconds
+it took: 236.26274899999999 seconds
+it took: 242.31772600000002 seconds
+it took: 242.129778 seconds
+it took: 248.170581 seconds
+it took: 241.587731 seconds
+it took: 246.140794 seconds
+it took: 248.688415 seconds
+it took: 252.47409499999998 seconds
+staring testing with threads = 2
+it took: 244.487811 seconds
+it took: 240.114644 seconds
+it took: 243.16833400000002 seconds
+it took: 238.081234 seconds
+it took: 247.697371 seconds
+it took: 233.567797 seconds
+it took: 242.409952 seconds
+it took: 238.473034 seconds
+it took: 237.248258 seconds
+it took: 237.385577 seconds
+staring testing with threads = 13
+it took: 296.42206699999997 seconds
+it took: 321.647209 seconds
+it took: 322.813194 seconds
+it took: 322.555071 seconds
+it took: 315.232615 seconds
+it took: 291.269438 seconds
+it took: 295.128554 seconds
+it took: 283.834139 seconds
+it took: 303.692543 seconds
+it took: 314.342615 seconds
