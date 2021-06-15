@@ -12,4 +12,8 @@ testparallelTimings.py is the final iteration for the brute-force attach using t
 
 hashingTiming.py is used to determine the hashing times for different lengths of password. 
 
+<<<<<<< HEAD
 script.sh was used to automate the collection of timing data.
+=======
+script.sh was used to automate the collection of timing data.
+>>>>>>> 09e256910a558bb47b01e81061ec1ec92a4fc578

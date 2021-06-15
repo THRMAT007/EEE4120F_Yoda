@@ -6,8 +6,8 @@ import os
 import threading
 
 TargetHash = "76a2173be6393254e72ffa4d6df1030a" # passwd
-#Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
-#Target_password = "d79096188b670c2f81b7001f73801117" # passw
+#TargetHash = "1a1dc91c907325c69271ddf0c944bc72" # pass
+#TargetHash = "d79096188b670c2f81b7001f73801117" # passw
 CHARACTERS  = range(97,123) #a-z
 MAX_LENGTH  = 7
 Num_threads =1
