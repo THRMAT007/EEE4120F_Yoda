@@ -39,7 +39,6 @@ def recurse(width, position, baseString):
     else:
         for char in CHARACTERS:
             hash(baseString + "%c" % char)
-
 # Iterates over all char combos up to a given length
 def brute_force():
     print("brute force attack starting")

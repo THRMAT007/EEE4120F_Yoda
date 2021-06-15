@@ -6,59 +6,40 @@ import os
 import threading
 from sys import argv
 
-#Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
-#Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
-#Target_password = "d79096188b670c2f81b7001f73801117" # passw
 CHARACTERS  = range(97,123) #a-z
 MAX_LENGTH  = 6
 begin = 0
-count =0
-#print(argv[1])
-#print(argv[2])
 
-Target_password = hashlib.md5(argv[1].encode('utf-8')).hexdigest()
-#print(Target_password.hexdigest())
-Num_threads = int(argv[2])
+Target_password = hashlib.md5(argv[1].encode('utf-8')).hexdigest() # takes user inputted word to create the target password
+Num_threads = int(argv[2]) # takes user input number for number of threads ( to be 1,2,13)
 
 def hash(password,number):
-    global count, begin 
-    count+=1
-    found = False
-    m = hashlib.md5(password.encode('utf-8'))
-    #print(m.hexdigest())
-    #print(password)
-    #print(Target_password)
+    global begin 
+    m = hashlib.md5(password.encode('utf-8')) # need to encode password to 'utf-8' format for md5 to hash nicely. 
     if (m.hexdigest() == Target_password):
-        end = time.clock()
-        #print("=============")
-        #print("Correct Password found: "+password)
-        #print(f"it took you {count} guesses")
+        end = time.clock() #end timing counter
         print(f"it took: {(end-begin)} seconds")
-        #print(f"found by thread: {number}")
-        found=True
-        os._exit(1)
+        os._exit(1) # ends program. probably should join threads, but leave that to the os to sort out when killing program
 
-def recurse(width, position, baseString,number):
+def recurse(width, position, baseString,number): #clever recursion code to iterate through all combinations of letter. could use a ripple counter instead, but this works.
     global Num_threads
-    if (position < width - 1):
-        for char in CHARACTERS:
+    if (position < width - 1): # used to build up the word to 'width' length
+        for char in CHARACTERS: 
             recurse(width, position + 1, baseString + "%c" % char,number)
-    else:
+    else: #when in last position of 'width' length word.
         for char in CHARACTERS[::Num_threads]:
             hash(baseString + "%c" % (char+number),number)
 
 
 # Iterates over all char combos up to a given length
 def brute_force(number):
-    #print(f"brute force attack starting on thread: {number}")
-    for baseWidth in range(1, MAX_LENGTH + 1):
-        #print(f"width: {baseWidth} starting")
-        recurse(baseWidth, 0, "",number)
+    for baseWidth in range(1, MAX_LENGTH + 1): #iterate through all lengths
+        recurse(baseWidth, 0, "",number) #starts the bruteforce attack for given length
 
 def menu():
     global begin
-    begin = time.clock()
-    for i in range(0,Num_threads):
+    begin = time.clock() #start timing counter
+    for i in range(0,Num_threads): #start threading process
         x = threading.Thread(target=brute_force,args=(i,) )
         x.start()
 
