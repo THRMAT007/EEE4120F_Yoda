@@ -5,7 +5,7 @@ import time
 import os
 import threading
 
-Target_password = "76a2173be6393254e72ffa4d6df1030a" # passwd
+TargetHash = "76a2173be6393254e72ffa4d6df1030a" # passwd
 #Target_password = "1a1dc91c907325c69271ddf0c944bc72" # pass
 #Target_password = "d79096188b670c2f81b7001f73801117" # passw
 CHARACTERS  = range(97,123) #a-z
@@ -16,20 +16,17 @@ Num_threads =1
 def hash(password,number):
     global count, begin
     count+=1
-    found = False
-    m = hashlib.md5(password.encode('utf-8'))
+    hashed = hashlib.md5(password.encode('utf-8'))
     #print(m.hexdigest())
-    if (m.hexdigest() == Target_password):
+    if (hashed.hexdigest() == TargetHash):
         end = time.clock()
-        print("=============")
-        print("Correct Password found: "+password)
+        print(f"Correct Password found: {password}")
         print(f"it took you {count} guesses")
         print(f"it took: {(end-begin)} seconds")
         print(f"found by thread: {number}")
-        found=True
-        os._exit(1)
+        os._exit(1) #ends program
 
-def recurse(width, position, baseString,number):
+def recurse(width, position, baseString,number): #clever recursion code to iterate through all combinations of letter. could use a ripple counter instead, but this works.
     if (position < width - 1):
         for char in CHARACTERS:
             recurse(width, position + 1, baseString + "%c" % char,number)
@@ -51,7 +48,7 @@ def start():
     begin = time.clock()
     while(1):
         guess = input("please enter a password \n")
-        hash(guess)
+        hash(guess,0)
 
 def menu():
     print("Hello, Welcome to password hasher")
@@ -60,13 +57,12 @@ def menu():
         start()
     else:
         global begin
-        begin = time.clock()
-        for i in range(0,Num_threads):
+        begin = time.clock() #start timer
+        for i in range(0,Num_threads): #start threads
             x = threading.Thread(target=brute_force,args=(i,) )
             x.start()
         
-
-#init
+#initiate global values
 begin = 0
 count =0
 menu()

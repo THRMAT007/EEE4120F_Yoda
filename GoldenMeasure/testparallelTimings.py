@@ -10,13 +10,13 @@ CHARACTERS  = range(97,123) #a-z
 MAX_LENGTH  = 6
 begin = 0
 
-Target_password = hashlib.md5(argv[1].encode('utf-8')).hexdigest() # takes user inputted word to create the target password
+TargetHash = hashlib.md5(argv[1].encode('utf-8')).hexdigest() # takes user inputted word to create the target password
 Num_threads = int(argv[2]) # takes user input number for number of threads ( to be 1,2,13)
 
 def hash(password,number):
     global begin 
-    m = hashlib.md5(password.encode('utf-8')) # need to encode password to 'utf-8' format for md5 to hash nicely. 
-    if (m.hexdigest() == Target_password):
+    hashed = hashlib.md5(password.encode('utf-8')) # need to encode password to 'utf-8' format for md5 to hash nicely. 
+    if (hashed.hexdigest() == TargetHash):
         end = time.clock() #end timing counter
         print(f"it took: {(end-begin)} seconds")
         os._exit(1) # ends program. probably should join threads, but leave that to the os to sort out when killing program
