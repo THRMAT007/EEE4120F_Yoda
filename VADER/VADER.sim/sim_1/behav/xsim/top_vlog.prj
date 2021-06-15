@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../VADER.srcs/sources_1/imports/pancham-0.5/design" \
+"../../../../VADER.srcs/sources_1/new/comparator.v" \
+"../../../../VADER.srcs/sources_1/imports/pancham-0.5/design/pancham.v" \
+"../../../../VADER.srcs/sources_1/imports/pancham-0.5/design/pancham_round.v" \
+"../../../../VADER.srcs/sources_1/imports/pancham-0.5/dv/top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
