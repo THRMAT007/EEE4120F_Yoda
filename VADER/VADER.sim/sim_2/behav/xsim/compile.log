@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/new/ASCIICounter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ASCIICounter
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_2/new/testASCII.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testASCII
