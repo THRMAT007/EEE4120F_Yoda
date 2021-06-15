@@ -2,14 +2,18 @@ import hashlib
 import time
 import os
 from sys import argv
+import random
+import string
+
+
 
 average = 0
 count =0
 
-paswords = 'a'
+paswords = random.choice(string.ascii_lowercase)
 
 for j in range(0,20):
-    print("Hashing of %s",paswords)
+    print(f"Hashing of {paswords}")
     for i in range(0,10):   
         begin = time.clock()
         Target_password = hashlib.md5(paswords.encode('utf-8')).hexdigest()
@@ -18,4 +22,4 @@ for j in range(0,20):
         count+=t
     average = count/10
     print(average)
-    paswords +='a'  
+    paswords += random.choice(string.ascii_lowercase)
