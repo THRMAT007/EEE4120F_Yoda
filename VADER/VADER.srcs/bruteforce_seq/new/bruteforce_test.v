@@ -8,15 +8,15 @@ reg [0:7] incAmount = 3'b1;
 reg reset;
 //reg enable;
 
-reg  [0:127] m_in;
-reg    [0:7] m_in_w;
-reg          m_in_val;
+//reg  [0:127] m_in;
+//reg    [0:7] m_in_w;
+//reg          m_in_val;
 wire ready;
 
 reg compreset;
 
 //outputs
-wire [0:127] generatedPass;
+wire [127:0] generatedPass;
 wire [0:7] passWidth;
 
 wire [0:127] m_out;
@@ -33,18 +33,13 @@ comparator comp(m_out_val, clk, compreset , m_out, target_hash, equal);
 PassGen textGenerator(clk, reset, ready, startPos, incAmount, generatedPass, passWidth);
 
 always begin
-
     #5 clk = ~clk;
-//    if (ready == 1)
-//    begin
-//        compreset = 1'b1; #5;
-//        compreset = 1'b0; #5;
-//        m_in_val = 1'b0; 
-//    end
+    if (equal)
+        $stop;
 end
 
 initial begin
-    target_hash = "a";
+    target_hash = 'h810EECD8FEDCCD3F1E4AD5CECAE3F689; //pass reversed and hashed
     //enable = 0;
     clk = 0;
     startPos = 0;
@@ -54,18 +49,7 @@ initial begin
     #12;
     reset = 0;
     compreset = 1'b0;
-    #12
-    m_in_val = 1;
-    
-    //enable = 1;//enable is a common wire to PassGen and t,o the hashing unit.
-    // Wait till the chip comes out of reset and ready 
-   // wait (!reset & enable);
-    // Wait till the chip becomes ready
-    //m_in     = generatedPass;
-    //m_in_w   = 8'h70;
-    //m_in_val = 1'b1;
-    //m_in_val = 1'b0;
-    // Wait for the result to come out; then compare
-    //wait(m_out_val);
+    #12;
+    //m_in_val = 1;
 end
 endmodule

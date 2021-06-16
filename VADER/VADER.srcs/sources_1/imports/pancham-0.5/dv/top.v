@@ -41,7 +41,7 @@ initial begin // {
 end // }
 
 initial begin // {
-   target_hash = 128'hf96b697d7cb7938d525a2f31aaf161d0;
+   target_hash = 128'hf96b697d7cb7938d525a2f31aaf161d0; //hsahed version of message digest, in reverse.
    m_in_val = 1'b0;
    // Wait till the chip comes out of reset and ready 
    wait (!rst & ready);

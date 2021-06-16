@@ -14,7 +14,7 @@ input reset;
 input enable;
 input [0:7] startPos;
 input [0:7] incAmount;
-output reg [0:127] generatedPass;
+output reg [127:0] generatedPass; //store in little endian.
 output reg [0:7] passWidth = 8; //only doing passwords up to 7 ASCII wide. So 8 bits can represent how many bits wide the string is (if 4 characters, thats 32 bits so here 32 is inputted).
 
 wire w0;
@@ -51,7 +51,7 @@ ASCIICounter c6(w5, reset, startPos, incAmount, enable, out6, w6);
 
 always @ (reset)
 begin
-    generatedPass <= 'h61000000000000000000000000000000;
+    generatedPass <= "a";
     passWidth <= 8;
     tempPass <= 8'h0;
     outputPass <= 8'h0;
@@ -60,13 +60,13 @@ end
 // One now needs to get the length of the password (passWidth) and store the passwords and output.
 always @ (posedge(clk))
 begin
-    generatedPass[0:7] <= out0;
-    generatedPass[8:15] <= out1;
-    generatedPass[16:23] <= out2;
-    generatedPass[24:31] <= out3;
-    generatedPass[32:39] <= out4;
-    generatedPass[40:47] <= out5;
-    generatedPass[48:55] <= out6;
+    generatedPass[7:0] <= out0;
+    generatedPass[15:8] <= out1;
+    generatedPass[23:16] <= out2;
+    generatedPass[31:24] <= out3;
+    generatedPass[39:32] <= out4;
+    generatedPass[47:40] <= out5;
+    generatedPass[55:48] <= out6;
 //    generatedPass[56:63] <= out7;
     
     if (out6 != 0)
@@ -87,10 +87,4 @@ begin
     if (out1 != 0)
         passWidth <= 16;
 end
-//ASCIICounter c0(clk, startPos, incAmount, enable, pass, w0);
-//ASCIICounter c0(clk, startPos, incAmount, enable, pass, w0);
-//ASCIICounter c0(clk, startPos, incAmount, enable, pass, w0);
-
-
-
 endmodule
