@@ -1,3 +1,7 @@
+//Author: Ian Edwards EDWIAN004
+//15/06/2021
+//EEE4120F YODA Project
+//Test bench to test ASCII counter.
 `timescale 1ns / 1ps
 module testASCII;
 

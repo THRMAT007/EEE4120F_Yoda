@@ -1,24 +1,8 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 06/15/2021 03:25:51 PM
-// Design Name: 
-// Module Name: ASCIICounter
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+//Author: Ian Edwards EDWIAN004
+//15/06/2021
+//EEE4120F YODA Project
 
+`timescale 1ns / 1ps
 
 module ASCIICounter(
     clk,
@@ -59,7 +43,9 @@ begin
     runOnce = 0;
     generatedPass = 8'h0;
 end
-
+//Every clk, if enabled, check if run for first time? If so, set the temp value.
+//If not first time and one has not met the end of the alphabet, increase the temp variable by the inc Amount.
+//If one reaches end of alphabet, wrap around.
 always @ (posedge clk)
     begin
         if (enable)

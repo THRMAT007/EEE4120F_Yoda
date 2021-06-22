@@ -1,3 +1,7 @@
+//Author: Ian Edwards EDWIAN004
+//15/06/2021
+//EEE4120F YODA Project
+//Password generator module made up of many ASCII counters in ripple connection
 `timescale 1ns / 1ps
 module PassGen(
     clk,
@@ -38,6 +42,7 @@ wire [0:7] out6;
 //wire [0:7] out7;
 
 //on each clk posedge this will now count.
+//instantiate 7 stage ASCII Ripple counter
 ASCIICounter c0(clk, reset, startPos, incAmount, enable, out0, w0);
 ASCIICounter c1(w0, reset, startPos, incAmount, enable, out1, w1);
 ASCIICounter c2(w1, reset, startPos, incAmount, enable, out2, w2);
@@ -68,7 +73,7 @@ begin
     generatedPass[47:40] <= out5;
     generatedPass[55:48] <= out6;
 //    generatedPass[56:63] <= out7;
-    
+// Determine password length
     if (out6 != 0)
         passWidth <= 56;
     else

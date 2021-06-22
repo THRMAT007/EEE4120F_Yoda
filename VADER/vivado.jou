@@ -2,270 +2,88 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Jun 15 17:19:16 2021
-# Process ID: 15204
-# Current directory: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13380 D:\My Documents\University\Fourth Year - 2021\EEE4120F - HPES\YODA - VADER\Code\VADER\VADER.xpr
-# Log file: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/vivado.log
-# Journal file: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER\vivado.jou
+# Start of session at: Wed Jun 16 12:12:38 2021
+# Process ID: 12904
+# Current directory: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7872 D:\My Documents\University\Fourth Year - 2021\EEE4120F - HPES\YODA - VADER\Code\EEE4120F_Yoda\VADER\VADER.xpr
+# Log file: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER/vivado.log
+# Journal file: D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.xpr}
+open_project {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER/VADER.xpr}
 update_compile_order -fileset sources_1
-current_fileset -simset [ get_filesets sim_1 ]
-delete_fileset [ get_filesets sim_2 ]
-file delete -force {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_2}
-export_ip_user_files -of_objects  [get_files {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/imports/pancham-0.5/dv/top.v}}] -no_script -reset -force -quiet
-remove_files  {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/imports/pancham-0.5/dv/top.v}}
-file delete -force {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/imports/pancham-0.5/dv/top.v}
-export_ip_user_files -of_objects  [get_files {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_1/new/testASCII.v}}] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_1/new/testASCII.v}}
-file delete -force {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_1/new/testASCII.v}
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/imports/pancham-0.5/dv/top.v}}
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-launch_simulation
-source top.tcl
-create_fileset -simset sim_2
-set_property SOURCE_SET sources_1 [get_filesets sim_2]
-file mkdir {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_2/new}
-close [ open {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_2/new/testASCII.v} w ]
-add_files -fileset sim_2 {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_2/new/testASCII.v}}
-update_compile_order -fileset sim_2
-move_files -fileset sim_1 [get_files  {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/new/comparator.v}}]
-update_compile_order -fileset sim_1
-close_sim
-launch_simulation
-source top.tcl
-current_fileset -simset [ get_filesets sim_2 ]
-set_property top testASCII [get_filesets sim_2]
-set_property top_lib xil_defaultlib [get_filesets sim_2]
-update_compile_order -fileset sim_2
-launch_simulation -simset [get_filesets sim_2 ]
-move_files -fileset sim_2 [get_files  {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/new/ASCIICounter.v}}]
-update_compile_order -fileset sim_2
-move_files [get_files  {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/new/ASCIICounter.v}}]
-update_compile_order -fileset sources_1
-move_files [get_files  {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sources_1/new/comparator.v}}]
-update_compile_order -fileset sources_1
-launch_simulation -simset [get_filesets sim_2 ]
-launch_simulation -simset [get_filesets sim_2 ]
-launch_simulation -simset [get_filesets sim_2 ]
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_2 ]
-source testASCII.tcl
-create_fileset -simset sim_3
-set_property SOURCE_SET sources_1 [get_filesets sim_3]
-file mkdir {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_3/new}
-close [ open {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_3/new/passwordGenTest.v} w ]
-add_files -fileset sim_3 {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/sim_3/new/passwordGenTest.v}}
-update_compile_order -fileset sim_3
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top passwordGenTest [get_filesets sim_3]
-set_property top_lib xil_defaultlib [get_filesets sim_3]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_3
-current_fileset -simset [ get_filesets sim_3 ]
-launch_simulation -simset [get_filesets sim_3 ]
-launch_simulation -simset [get_filesets sim_3 ]
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-save_wave_config {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/passwordGenTest_behav.wcfg}
-save_wave_config {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/passwordGenTest_behav.wcfg}
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {1s} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {0.119s} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {175760ns} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {175770ns} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-set_property -name {xsim.simulate.runtime} -value {175850ns} -objects [get_filesets sim_3]
-close_sim
-launch_simulation -simset [get_filesets sim_3 ]
-source passwordGenTest.tcl
-save_wave_config {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/passwordGenTest_behav1.wcfg}
-save_wave_config {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/passwordGenTest_behav1.wcfg}
-create_fileset -simset bruteforce_seq
-set_property SOURCE_SET sources_1 [get_filesets bruteforce_seq]
-file mkdir {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/bruteforce_seq/new}
-close [ open {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/bruteforce_seq/new/bruteforce_test.v} w ]
-add_files -fileset bruteforce_seq {{D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/bruteforce_seq/new/bruteforce_test.v}}
+create_bd_design -srcset bruteforce_seq "VADER"
 update_compile_order -fileset bruteforce_seq
-update_compile_order -fileset bruteforce_seq
-update_compile_order -fileset bruteforce_seq
-update_compile_order -fileset bruteforce_seq
-current_fileset -simset [ get_filesets bruteforce_seq ]
-launch_simulation -simset [get_filesets bruteforce_seq ]
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-set_property -name {xsim.simulate.runtime} -value {6000ns} -objects [get_filesets bruteforce_seq]
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-save_wave_config {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/bruteforce_test_behav.wcfg}
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-add_bp {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/bruteforce_seq/new/bruteforce_test.v} 38
-remove_bps -file {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.srcs/bruteforce_seq/new/bruteforce_test.v} -line 38
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-launch_simulation -simset [get_filesets bruteforce_seq ]
-source bruteforce_test.tcl
-close_sim
-current_sim simulation_35
-close_sim
-current_sim simulation_15
-close_sim
-close_sim
+create_bd_cell -type module -reference PassGen PassGen_0
+set_property location {0.5 -94 28} [get_bd_cells PassGen_0]
+create_bd_cell -type module -reference comparator comparator_0
+create_bd_cell -type module -reference pancham pancham_0
+set_property location {0.5 -394 186} [get_bd_cells PassGen_0]
+set_property location {2.5 302 183} [get_bd_cells comparator_0]
+set_property location {2 6 189} [get_bd_cells pancham_0]
+set_property location {3 302 194} [get_bd_cells comparator_0]
+set_property location {3 326 189} [get_bd_cells comparator_0]
+set_property location {2 -14 189} [get_bd_cells pancham_0]
+set_property location {1 -485 192} [get_bd_cells PassGen_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins comparator_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins pancham_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {New Clocking Wizard} Freq {100} Ref_Clk0 {} Ref_Clk1 {} Ref_Clk2 {}}  [get_bd_pins PassGen_0/clk]
+endgroup
+undo
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {Auto} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins comparator_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {Auto} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins pancham_0/clk]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {Auto} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins PassGen_0/clk]
+endgroup
+undo
+set_property location {1 202 182} [get_bd_cells PassGen_0]
+set_property location {1 198 202} [get_bd_cells PassGen_0]
+set_property location {2 550 209} [get_bd_cells pancham_0]
+set_property location {3 907 215} [get_bd_cells comparator_0]
+set_property location {2 541 196} [get_bd_cells pancham_0]
+synth_design -rtl -name rtl_1
+close_design
+create_bd_cell -type module -reference pancham pancham_1
+open_bd_design {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER/VADER.srcs/bruteforce_seq/bd/VADER/VADER.bd}
+delete_bd_objs [get_bd_cells pancham_1]
+connect_bd_net [get_bd_pins pancham_0/clk] [get_bd_pins PassGen_0/clk]
+connect_bd_net [get_bd_pins comparator_0/clk] [get_bd_pins pancham_0/clk]
+connect_bd_net [get_bd_pins pancham_0/reset] [get_bd_pins PassGen_0/reset]
+connect_bd_net [get_bd_pins comparator_0/reset] [get_bd_pins pancham_0/reset]
+connect_bd_net [get_bd_pins PassGen_0/enable] [get_bd_pins pancham_0/ready]
+connect_bd_net [get_bd_pins PassGen_0/generatedPass] [get_bd_pins pancham_0/msg_in]
+connect_bd_net [get_bd_pins PassGen_0/passWidth] [get_bd_pins pancham_0/msg_in_width]
+connect_bd_net [get_bd_pins pancham_0/msg_in_valid] [get_bd_pins pancham_0/ready]
+connect_bd_net [get_bd_pins pancham_0/msg_output] [get_bd_pins comparator_0/verify_hash]
+connect_bd_net [get_bd_pins pancham_0/msg_out_valid] [get_bd_pins comparator_0/verify_valid]
+startgroup
+make_bd_pins_external  [get_bd_pins comparator_0/equal]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins PassGen_0/startPos]
+endgroup
+startgroup
+create_bd_port -dir I -from 0 -to 7 incAmount
+connect_bd_net [get_bd_pins /PassGen_0/incAmount] [get_bd_ports incAmount]
+endgroup
+undo
+startgroup
+make_bd_pins_external  [get_bd_pins PassGen_0/incAmount]
+endgroup
+create_bd_port -dir I CLK
+set_property location {-52 148} [get_bd_ports CLK]
+connect_bd_net [get_bd_ports CLK] [get_bd_pins pancham_0/clk]
+startgroup
+make_bd_pins_external  [get_bd_pins comparator_0/target_hash]
+endgroup
+set_property location {-40 327} [get_bd_ports target_hash_0]
+set_property location {1061 211} [get_bd_ports equal_0]
+set_property location {1086 227} [get_bd_ports equal_0]
+set_property location {1257 215} [get_bd_ports equal_0]
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+write_bd_layout -format pdf -orientation portrait {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.pdf}
+write_bd_layout -format pdf -orientation portrait -scope visible -force {D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.pdf}
+save_bd_design
+close_bd_design [get_bd_designs VADER]

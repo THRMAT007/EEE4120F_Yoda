@@ -1,0 +1,233 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "name": "VADER",
+      "synth_flow_mode": "None",
+      "tool_version": "2019.2"
+    },
+    "design_tree": {
+      "pancham_0": "",
+      "PassGen_0": "",
+      "comparator_0": ""
+    },
+    "ports": {
+      "equal_0": {
+        "direction": "O"
+      },
+      "startPos_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "7"
+      },
+      "incAmount_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "7"
+      },
+      "CLK": {
+        "direction": "I"
+      },
+      "target_hash_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "127"
+      }
+    },
+    "components": {
+      "pancham_0": {
+        "vlnv": "xilinx.com:module_ref:pancham:1.0",
+        "xci_name": "VADER_pancham_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "pancham",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "msg_in": {
+            "direction": "I",
+            "left": "0",
+            "right": "127"
+          },
+          "msg_in_width": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "msg_in_valid": {
+            "direction": "I"
+          },
+          "msg_output": {
+            "direction": "O",
+            "left": "0",
+            "right": "127"
+          },
+          "msg_out_valid": {
+            "direction": "O"
+          },
+          "ready": {
+            "direction": "O"
+          }
+        }
+      },
+      "PassGen_0": {
+        "vlnv": "xilinx.com:module_ref:PassGen:1.0",
+        "xci_name": "VADER_PassGen_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PassGen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "startPos": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "incAmount": {
+            "direction": "I",
+            "left": "0",
+            "right": "7"
+          },
+          "generatedPass": {
+            "direction": "O",
+            "left": "127",
+            "right": "0"
+          },
+          "passWidth": {
+            "direction": "O",
+            "left": "0",
+            "right": "7"
+          }
+        }
+      },
+      "comparator_0": {
+        "vlnv": "xilinx.com:module_ref:comparator:1.0",
+        "xci_name": "VADER_comparator_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "verify_valid": {
+            "direction": "I"
+          },
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "verify_hash": {
+            "direction": "I",
+            "left": "0",
+            "right": "127"
+          },
+          "target_hash": {
+            "direction": "I",
+            "left": "0",
+            "right": "127"
+          },
+          "equal": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "CLK",
+          "pancham_0/clk",
+          "PassGen_0/clk",
+          "comparator_0/clk"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "pancham_0/reset",
+          "PassGen_0/reset",
+          "comparator_0/reset"
+        ]
+      },
+      "pancham_0_ready": {
+        "ports": [
+          "pancham_0/ready",
+          "pancham_0/msg_in_valid",
+          "PassGen_0/enable"
+        ]
+      },
+      "PassGen_0_generatedPass": {
+        "ports": [
+          "PassGen_0/generatedPass",
+          "pancham_0/msg_in"
+        ]
+      },
+      "PassGen_0_passWidth": {
+        "ports": [
+          "PassGen_0/passWidth",
+          "pancham_0/msg_in_width"
+        ]
+      },
+      "pancham_0_msg_output": {
+        "ports": [
+          "pancham_0/msg_output",
+          "comparator_0/verify_hash"
+        ]
+      },
+      "pancham_0_msg_out_valid": {
+        "ports": [
+          "pancham_0/msg_out_valid",
+          "comparator_0/verify_valid"
+        ]
+      },
+      "comparator_0_equal": {
+        "ports": [
+          "comparator_0/equal",
+          "equal_0"
+        ]
+      },
+      "startPos_0_1": {
+        "ports": [
+          "startPos_0",
+          "PassGen_0/startPos"
+        ]
+      },
+      "incAmount_0_1": {
+        "ports": [
+          "incAmount_0",
+          "PassGen_0/incAmount"
+        ]
+      },
+      "target_hash_0_1": {
+        "ports": [
+          "target_hash_0",
+          "comparator_0/target_hash"
+        ]
+      }
+    }
+  }
+}

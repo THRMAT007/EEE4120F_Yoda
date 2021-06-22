@@ -1,7 +1,7 @@
-Running: xsim.dir/bruteforce_test_behav/xsimk.exe -simmode gui -wdb bruteforce_test_behav.wdb -simrunnum 0 -socket 54029
+Running: xsim.dir/bruteforce_test_behav/xsimk.exe -simmode gui -wdb bruteforce_test_behav.wdb -simrunnum 0 -socket 54598
 Design successfully loaded
-Design Loading Memory Usage: 5932 KB (Peak: 5932 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 6328 KB (Peak: 6328 KB)
+Design Loading CPU Usage: 46 ms
 Simulation completed
-Simulation Memory Usage: 14728 KB (Peak: 14728 KB)
-Simulation CPU Usage: 138296 ms
+Simulation Memory Usage: 15156 KB (Peak: 15156 KB)
+Simulation CPU Usage: 205015 ms

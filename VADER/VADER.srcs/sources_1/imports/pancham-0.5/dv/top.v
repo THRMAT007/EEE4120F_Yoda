@@ -1,3 +1,9 @@
+//Author: Ian Edwards EDWIAN004
+//15/06/2021
+//EEE4120F YODA Project
+
+//test bench for testing hashing unit
+
 `timescale 1 ns/1 ps
 
 module top;

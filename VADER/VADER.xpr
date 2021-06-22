@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="44" Path="D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/VADER/VADER.xpr">
+<Project Version="7" Minor="44" Path="D:/My Documents/University/Fourth Year - 2021/EEE4120F - HPES/YODA - VADER/Code/EEE4120F_Yoda/VADER/VADER.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="8aec8eb84b0c4edcb277888147d25c02"/>
@@ -18,7 +18,7 @@
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val="digilentinc.com:nexys4_ddr:part0:1.1"/>
-    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="ActiveSimSet" Val="bruteforce_seq"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -30,7 +30,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys4_ddr"/>
-    <Option Name="WTXSimLaunchSim" Val="144"/>
+    <Option Name="WTXSimLaunchSim" Val="147"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -61,7 +61,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/imports/pancham-0.5/design/pancham.h">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../pancham-0.5/design/pancham.h"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../pancham-0.5/design/pancham.h"/>
           <Attr Name="ImportTime" Val="1053016824"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -69,7 +69,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/pancham-0.5/design/pancham_round.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../pancham-0.5/design/pancham_round.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../pancham-0.5/design/pancham_round.v"/>
           <Attr Name="ImportTime" Val="1053016824"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -78,7 +78,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/pancham-0.5/design/pancham.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../pancham-0.5/design/pancham.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../pancham-0.5/design/pancham.v"/>
           <Attr Name="ImportTime" Val="1084922101"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -139,7 +139,7 @@
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="xsim.simulate.runtime" Val="10000ns"/>
+        <Option Name="xsim.simulate.runtime" Val="500ms"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
@@ -192,6 +192,14 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/bruteforce_seq/new/bruteforce_test.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/bruteforce_seq/bd/VADER/VADER.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

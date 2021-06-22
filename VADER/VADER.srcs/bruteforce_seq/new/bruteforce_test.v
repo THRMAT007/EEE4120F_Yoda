@@ -1,3 +1,7 @@
+//Author: Ian Edwards EDWIAN004
+//15/06/2021
+//EEE4120F YODA Project
+//Testbench for brute force sequential password cracking
 `timescale 1ns / 1ps
 module bruteforce_test;
 
