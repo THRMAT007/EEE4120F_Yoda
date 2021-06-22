@@ -1,5 +1,5 @@
 # EEE4120F_Yoda
-Some shitty python code for Golden measure for password breaking of md5 hashed password
+python code for Golden measure for password breaking of md5 hashed password
 All code run using python3
 check all required libaries are installed prior to running code. all libaries can be found with pip3 install 'libary'
 Required libaries: hashlib, os, time, random, sys, string, threading
